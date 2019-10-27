@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--manifests - provider와 연동 = 공유할 내부 폴더의 위치 -->
+<paths>
+    <external-path name="storage/emulated" path="."/>
+</paths>

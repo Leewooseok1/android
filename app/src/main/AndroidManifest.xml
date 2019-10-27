@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lws.work">
+
+    <!-- 갤러리 Activity -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 외부 저장소 데이터 읽고 쓰기 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 외부 저장소 데이터 읽고 쓰기 -->
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/icon"
+        android:label="Fashionistar"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".SelectActivity" />
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".Help2Activity" />
+        <activity android:name=".Sub1Activity" />
+        <activity android:name=".Sub2Activity" />
+        <activity android:name=".Sub3Activity" />
+        <activity android:name=".Sub4Activity" />
+        <activity android:name=".Sub5Activity" />
+        <activity android:name=".Sub6Activity" />
+
+        <!-- 팝업 Activity -->
+        <activity
+            android:name=".SelectPOPActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/popupTheme" />
+        <activity android:name=".GalleryActivity" />
+        <activity android:name=".FavoriteActivity" />
+
+        <!-- 컨텐트 프로바이더 = app 내부 폴더의 파일 외부 app에 공유하기 = 파일공유하기-->
+        <!-- authorites run모드에따라 패키지 이름 변경될수있어서 ${applicationId}사용 -->
+        <!-- exported 외부 앱에서 내 앱 접근 불가-->
+        <!-- grantUriPermissions 특정 uri 경로에 해당하는 부분에 대해서 권한을 준다-->
+
+        <!-- meta-data = Activity가 사용할수있게 추가적인 데이터설정 == 리소스 만들어서 파일 공유 가능하게-->
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+    </application>
+
+</manifest>

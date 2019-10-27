@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Work</string>
+    <string name="colorex1">"설정한 색상
+     \n빨강, 주황, 노랑, 초록, 파랑, 보라
+     핑크, 갈색, 회색, 검정, 흰색
+        \n참고 - 색상표, 패션사이트"
+    </string>
+</resources>

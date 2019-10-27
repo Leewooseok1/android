@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:padding="10dp">
+
+    <com.example.lws.work.common.SquareImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:background="@drawable/btn_bg_ex_round2"
+        android:scaleType="centerCrop" />
+        //ImageView의 크기에 이미지를 끼워 맞추는 옵션입니다. 빈공간 없이 맞춘다. 가로세로 균형 맞아야한다.
+</LinearLayout>
